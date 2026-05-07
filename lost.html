@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Lost Item</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/lost_found.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="7" stroke="#6366F1" stroke-width="2" />
+            <line
+              x1="17.5"
+              y1="17.5"
+              x2="22"
+              y2="22"
+              stroke="#6366F1"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="logo-text">Unifound</div>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" />
+
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="mobile-menu">
+        <div class="mobile-divider"></div>
+
+        <ul class="nav-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lost.html">Report Lost Item</a></li>
+          <li><a href="found.html">Found Something</a></li>
+          <li><a href="track_item.html">Track Status</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="mobile-divider"></div>
+
+        <div class="nav-right">
+          <a href="login.html" class="login">Login</a>
+          <a href="login.html" class="signup-btn">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <a href="index.html" class="back"><- Back to Home</a>
+
+      <div class="card">
+        <h2>Report a Lost Item</h2>
+        <p class="subtitle">
+          Fill in the details below. The more info you provide, the faster we
+          can help.
+        </p>
+
+        <form>
+          <label>Item Name *</label>
+          <input type="text" placeholder="e.g. Black laptop bag" required />
+          <div class="select-wrapper">
+          <label>Category *</label>
+          <select required>
+            <option value="">Select a category</option>
+            <option>Electronics</option>
+            <option>Clothing</option>
+            <option>Accessories</option>
+            <option>Documents</option>
+            <option>Other</option>
+          </select>
+          </div>
+          <label>Description</label>
+          <textarea
+            placeholder="Describe the item — color, brand, distinguishing features..."
+          ></textarea>
+
+          <div class="row">
+            <div class="col">
+              <label>Last Seen Location *</label>
+              <input
+                type="text"
+                placeholder="e.g. Library, 2nd floor"
+                required
+              />
+            </div>
+            <div class="col">
+              <label>Date Lost *</label>
+              <input type="date" required min="1900-01-01" max="2099-12-31" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label>Email *</label>
+              <input type="email" placeholder="you@university.edu" required />
+            </div>
+            <div class="col">
+              <label>Phone (optional)</label>
+              <input type="tel" placeholder="+1 234 567 890" maxlength="10"/>
+            </div>
+          </div>
+
+          <label>Photo (optional)</label>
+          <div class="upload-box" id="uploadBox">
+            Click to upload or drag & drop <br />
+            <small>PNG, JPG up to 5MB</small>
+            <input type="file" id="fileInput" hidden />
+          </div>
+          <p id="fileName"></p>
+
+          <button type="submit">Submit Report</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="7"
+                  stroke="#6366F1"
+                  stroke-width="2"
+                />
+                <line
+                  x1="17.5"
+                  y1="17.5"
+                  x2="22"
+                  y2="22"
+                  stroke="#6366F1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span>Unifound</span>
+            </div>
+
+            <p class="footer-desc">
+              A modern lost &amp; found platform built for university campuses.
+              Report, track, and recover — all in one place.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Platform</h4>
+              <a href="lost.html">Report Lost Item</a>
+              <a href="found.html">Report Found Item</a>
+              <a href="track_item.html">Track Item</a>
+              <a href="#">Dashboard</a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Resources</h4>
+              <a href="#">How It Works</a>
+              <a href="#">FAQ</a>
+              <a href="#">Support</a>
+              <a href="#">Blog</a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Legal</h4>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-bottom">© 2026 Unifound. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/auth.js"></script>
+    <script src="js/lost.js"></script>
+    <script>
+      // Require authentication for this page
+      document.addEventListener('DOMContentLoaded', function() {
+        if (!window.auth.requireAuth()) {
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>

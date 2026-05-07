@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Unifound</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="7" stroke="#6366F1" stroke-width="2"/>
+          <line x1="17.5" y1="17.5" x2="22" y2="22" stroke="#6366F1" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-text">Unifound Admin</div>
+    </div>
+
+    <div class="nav-right">
+      <span class="user-greeting">Hi, Admin</span>
+      <a href="index.html" class="login">Back to Site</a>
+      <button class="signup-btn" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="admin-container">
+    <!-- Analytics Cards -->
+    <div class="analytics-grid">
+      <div class="stat-card">
+        <div class="stat-icon pending">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-value" id="pendingCount">0</div>
+          <div class="stat-label">Pending Reports</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon lost">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4l3 3"/>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-value" id="lostCount">0</div>
+          <div class="stat-label">Lost Items</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon found">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-value" id="foundCount">0</div>
+          <div class="stat-label">Found Items</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon matched">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-value" id="matchedCount">0</div>
+          <div class="stat-label">Matched Items</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="pending">Pending Verification</button>
+      <button class="tab" data-tab="lost">Lost Reports</button>
+      <button class="tab" data-tab="found">Found Reports</button>
+      <button class="tab" data-tab="matched">Matched Items</button>
+      <button class="tab" data-tab="activity">Activity Log</button>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="toolbar">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search reports...">
+      </div>
+      <div class="filter-box">
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Documents">Documents</option>
+          <option value="Other">Other</option>
+        </select>
+        <select id="statusFilter">
+          <option value="">All Status</option>
+          <option value="pending">Pending</option>
+          <option value="under_review">Under Review</option>
+          <option value="match_found">Match Found</option>
+          <option value="confirmed">Confirmed</option>
+          <option value="rejected">Rejected</option>
+          <option value="returned">Returned</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Reports Container -->
+    <div class="reports-container" id="reportsContainer">
+      <!-- Reports will be loaded here -->
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 8v4l3 3"/>
+      </svg>
+      <h3>No reports found</h3>
+      <p>There are no reports matching your criteria.</p>
+    </div>
+  </div>
+
+  <!-- Match Review Modal -->
+  <div class="modal" id="matchModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Review Match</h2>
+        <button class="close-btn" onclick="closeMatchModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="matchModalBody">
+        <!-- Match details will be loaded here -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-reject" onclick="rejectMatch()">Reject Match</button>
+        <button class="btn btn-confirm" onclick="confirmMatch()">Confirm Match</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Report Details Modal -->
+  <div class="modal" id="reportModal">
+    <div class="modal-content modal-large">
+      <div class="modal-header">
+        <h2>Report Details</h2>
+        <button class="close-btn" onclick="closeReportModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="reportModalBody">
+        <!-- Report details will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    // Require admin access
+    document.addEventListener('DOMContentLoaded', function() {
+      if (!window.auth.requireAdmin()) {
+        return;
+      }
+      loadAdminData();
+    });
+
+    function logout() {
+      window.auth.logout();
+    }
+  </script>
+</body>
+</html>

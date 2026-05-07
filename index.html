@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="7" stroke="#6366F1" stroke-width="2" />
+            <line
+              x1="17.5"
+              y1="17.5"
+              x2="22"
+              y2="22"
+              stroke="#6366F1"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="logo-text">Unifound</div>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" />
+
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="mobile-menu">
+        <div class="mobile-divider"></div>
+
+        <ul class="nav-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lost.html">Report Lost Item</a></li>
+          <li><a href="found.html">Found Something</a></li>
+          <li><a href="track_item.html">Track Status</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="mobile-divider"></div>
+
+        <div class="nav-right">
+          <a href="login.html" class="login">Login</a>
+          <a href="login.html" class="signup-btn">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-left">
+          <p class="hero-badge">CAMPUS LOST & FOUND PLATFORM</p>
+
+          <h1 class="hero-title">
+            Lost Something on Campus?<br />
+            <span class="bold">Find It Faster with</span>
+            <span class="brand">Unifound.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Report. Track. Recover. Our streamlined platform connects you with
+            campus administrators to help recover your lost belongings — simply
+            and securely.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="lost.html" class="btn-primary">Report Lost Item</a>
+            <a href="found.html" class="btn-secondary">I Found Something</a>
+          </div>
+
+          <div class="hero-features">
+            <div class="feature-item">
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                stroke="#10b981"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" />
+              </svg>
+              <span>Secure</span>
+            </div>
+
+            <div class="feature-item">
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                stroke="#10b981"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              <span>Campus Verified</span>
+            </div>
+
+            <div class="feature-item">
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                stroke="#10b981"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 12a7 7 0 0 1 14 0" />
+                <path d="M8 12a4 4 0 0 1 8 0" />
+                <circle cx="12" cy="12" r="1" />
+              </svg>
+              <span>Real-Time Tracking</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="hero-right">
+          <div class="illustration-box">
+            <img src="./images/Untitled design.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works" class="how-it-works">
+      <div class="how-container">
+        <p class="how-badge">SIMPLE PROCESS</p>
+        <h2 class="how-title">How It Works</h2>
+
+        <div class="steps">
+          <div class="step-card">
+            <div class="step-icon">
+              <svg
+                width="30"
+                height="30"
+                fill="none"
+                stroke="#6366f1"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="14" y2="17" />
+              </svg>
+            </div>
+            <p class="step-label">STEP 1</p>
+            <h3 class="step-title">Report Your Item</h3>
+            <p class="step-desc">
+              Submit a lost or found item report with details — it takes under 2
+              minutes.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-icon">
+              <svg
+                width="30"
+                height="30"
+                fill="none"
+                stroke="#6366f1"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" />
+                <path d="M9.5 12.5l2 2 3-4" />
+              </svg>
+            </div>
+            <p class="step-label">STEP 2</p>
+            <h3 class="step-title">Admin Verifies</h3>
+            <p class="step-desc">
+              Campus administrators review, verify, and update the status of
+              your report.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-icon">
+              <svg
+                width="30"
+                height="30"
+                fill="none"
+                stroke="#6366f1"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <line x1="5" y1="20" x2="19" y2="20" />
+                <line x1="7" y1="16" x2="7" y2="10" />
+                <line x1="12" y1="16" x2="12" y2="6" />
+                <line x1="17" y1="16" x2="17" y2="12" />
+              </svg>
+            </div>
+            <p class="step-label">STEP 3</p>
+            <h3 class="step-title">Track in Real-Time</h3>
+            <p class="step-desc">
+              Monitor your complaint's progress and get notified when there's an
+              update.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="features-section">
+      <div class="features-container">
+        <p class="features-badge">POWERFUL FEATURES</p>
+        <h2 class="features-title">Everything You Need</h2>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                stroke="#6366f1"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <line x1="5" y1="20" x2="19" y2="20" />
+                <line x1="7" y1="16" x2="7" y2="10" />
+                <line x1="12" y1="16" x2="12" y2="6" />
+                <line x1="17" y1="16" x2="17" y2="12" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Real-Time Tracking</h3>
+            <p class="feature-card-desc">
+              Monitor the status of your report with a live dashboard — from
+              submission to resolution.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                stroke="#6366f1"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <rect x="3" y="11" width="18" height="10" rx="2" />
+                <path d="M7 11V8a5 5 0 0 1 10 0v3" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Secure Student Login</h3>
+            <p class="feature-card-desc">
+              Your data is protected with campus-verified authentication and
+              encryption.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                stroke="#6366f1"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" />
+                <path d="M9.5 12.5l2 2 3-4" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Admin Verification</h3>
+            <p class="feature-card-desc">
+              Every item goes through a verified process by campus
+              administrators.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                stroke="#6366f1"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"
+                />
+                <path
+                  d="M19 3l.7 2.3L22 6l-2.3.7L19 9l-.7-2.3L16 6l2.3-.7L19 3z"
+                />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Smart Item Matching</h3>
+            <p class="feature-card-desc">
+              Our system automatically suggests potential matches between lost
+              and found items.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                stroke="#6366f1"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8" />
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Email & Notifications</h3>
+            <p class="feature-card-desc">
+              Get instant alerts when your item status changes or a match is
+              found.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                stroke="#6366f1"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <ellipse cx="12" cy="5" rx="7" ry="3" />
+                <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5" />
+                <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Searchable Database</h3>
+            <p class="feature-card-desc">
+              Browse through all reported items with powerful search and filter
+              options.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials" class="testimonials-section">
+      <div class="testimonials-container">
+        <p class="testimonials-badge">TRUSTED BY STUDENTS</p>
+        <h2 class="testimonials-title">
+          Built for Students. Trusted by Campus.
+        </h2>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+
+            <p class="testimonial-text">
+              "I lost my laptop charger and got it back within 48 hours.
+              Unifound made the process incredibly simple."
+            </p>
+
+            <div class="testimonial-user">
+              <h4>Priya Sharma</h4>
+              <p>Delhi University</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+
+            <p class="testimonial-text">
+              "The real-time tracking was a game changer. I could see exactly
+              when my item was verified and ready for pickup."
+            </p>
+
+            <div class="testimonial-user">
+              <h4>Arjun Mehta</h4>
+              <p>IIT Bombay</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span class="star-muted">★</span>
+            </div>
+
+            <p class="testimonial-text">
+              "As an admin, this platform streamlined our entire lost &amp;
+              found process. Highly recommended."
+            </p>
+
+            <div class="testimonial-user">
+              <h4>Sneha Patel</h4>
+              <p>BITS Pilani</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="dashboard-preview-section">
+      <div class="dashboard-preview-container">
+        <p class="dashboard-preview-badge">DASHBOARD PREVIEW</p>
+        <h2 class="dashboard-preview-title">Track Every Step</h2>
+
+        <div class="dashboard-card">
+          <div class="dashboard-top">
+            <div class="complaint-block">
+              <p class="dashboard-label">Complaint No.</p>
+              <h3 class="complaint-id">#UF-2026-0472</h3>
+            </div>
+
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span>In Progress</span>
+            </div>
+          </div>
+
+          <div class="dashboard-info-grid">
+            <div class="info-group">
+              <p class="dashboard-label">Item</p>
+              <h4>Black Laptop Charger</h4>
+            </div>
+
+            <div class="info-group">
+              <p class="dashboard-label">Location</p>
+              <h4>Library, Block A</h4>
+            </div>
+
+            <div class="info-group">
+              <p class="dashboard-label">Reported By</p>
+              <h4>Priya S.</h4>
+            </div>
+
+            <div class="info-group">
+              <p class="dashboard-label">Category</p>
+              <h4>Electronics</h4>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item completed">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h5>Report Submitted</h5>
+                <p>Feb 25, 2026</p>
+              </div>
+            </div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h5>Under Review</h5>
+                <p>Feb 26, 2026</p>
+              </div>
+            </div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h5>Item Verified</h5>
+                <p>Feb 27, 2026</p>
+              </div>
+            </div>
+
+            <div class="timeline-item pending">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h5>Ready for Pickup</h5>
+                <p>Pending</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <p class="faq-badge">FAQ</p>
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span>How long does verification take?</span>
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </summary>
+            <div class="faq-answer-wrap">
+              <div class="faq-answer">
+                Most items are reviewed and verified within 24–48 hours by
+                campus administrators. You'll receive an email notification as
+                soon as the status changes.
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Is my data secure?</span>
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </summary>
+            <div class="faq-answer-wrap">
+              <div class="faq-answer">
+                Yes. Your information is protected using secure authentication
+                and is only accessible to authorized campus staff.
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can I edit my report after submission?</span>
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </summary>
+            <div class="faq-answer-wrap">
+              <div class="faq-answer">
+                You can update certain details after submission depending on
+                your report status and your campus verification process.
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Who verifies the items?</span>
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </summary>
+            <div class="faq-answer-wrap">
+              <div class="faq-answer">
+                Verified campus administrators or designated lost-and-found
+                staff review and confirm item details.
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What if no one finds my item?</span>
+              <svg
+                class="faq-chevron"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </summary>
+            <div class="faq-answer-wrap">
+              <div class="faq-answer">
+                Your report stays active in the system, and you'll be notified
+                if a matching item is submitted later.
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="cta-section">
+      <div class="cta-container">
+        <div class="cta-card">
+          <h2 class="cta-title">Stop Worrying. Start Tracking.</h2>
+          <p class="cta-text">
+            Report your lost item in under 2 minutes and let us handle the rest.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="#" class="cta-primary-btn">Report Now</a>
+            <a href="#" class="cta-secondary-btn">Create Account</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="7"
+                  stroke="#6366F1"
+                  stroke-width="2"
+                />
+                <line
+                  x1="17.5"
+                  y1="17.5"
+                  x2="22"
+                  y2="22"
+                  stroke="#6366F1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span>Unifound</span>
+            </div>
+
+            <p class="footer-desc">
+              A modern lost &amp; found platform built for university campuses.
+              Report, track, and recover — all in one place.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Platform</h4>
+              <a href="lost.html">Report Lost Item</a>
+              <a href="found.html">Report Found Item</a>
+              <a href="track_item.html">Track Item</a>
+              <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Resources</h4>
+              <a href="#how-it-works">How It Works</a>
+              <a href="#faq">FAQ</a>
+              <a href="#contact">Support</a>
+              <a href="#testimonials">Blog</a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Legal</h4>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-bottom">© 2026 Unifound. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

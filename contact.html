@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+  <nav class="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="7" stroke="#6366F1" stroke-width="2" />
+            <line
+              x1="17.5"
+              y1="17.5"
+              x2="22"
+              y2="22"
+              stroke="#6366F1"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="logo-text">Unifound</div>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" />
+
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="mobile-menu">
+        <div class="mobile-divider"></div>
+
+        <ul class="nav-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lost.html">Report Lost Item</a></li>
+          <li><a href="found.html">Found Something</a></li>
+          <li><a href="track_item.html">Track Status</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="mobile-divider"></div>
+
+        <div class="nav-right">
+          <a href="login.html" class="login">Login</a>
+          <a href="login.html" class="signup-btn">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container">
+    <div class="heading">
+      <h1>Get in Touch</h1>
+      <p>Have a question or need help? We're here for you.</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <!-- LEFT: stacked cards -->
+      <div class="contact-cards">
+        <div class="card">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 6h16v12H4z" stroke="#6366f1" stroke-width="1.5"/>
+              <path d="M4 6l8 6 8-6" stroke="#6366f1" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="title">Email</p>
+            <p class="subtitle">support@unifound.app</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                19.86 19.86 0 0 1-8.63-3.07
+                19.5 19.5 0 0 1-6-6
+                19.86 19.86 0 0 1-3.07-8.67
+                A2 2 0 0 1 4.11 2h3
+                a2 2 0 0 1 2 1.72
+                c.12.81.37 1.6.72 2.34
+                a2 2 0 0 1-.45 2.11L8.09 9.91
+                a16 16 0 0 0 6 6l1.74-1.29
+                a2 2 0 0 1 2.11-.45
+                c.74.35 1.53.6 2.34.72
+                A2 2 0 0 1 22 16.92z"
+                stroke="#6366f1" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="title">Phone</p>
+            <p class="subtitle">+1 (555) 123-4567</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"
+                stroke="#6366f1" stroke-width="1.5"/>
+              <circle cx="12" cy="11" r="2" stroke="#6366f1" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="title">Address</p>
+            <p class="subtitle">Student Center, Room 204<br>University Campus</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="you@university.edu">
+          </div>
+        </div>
+        <div class="form-group full">
+          <label>Subject</label>
+          <input type="text" placeholder="How can we help?">
+        </div>
+        <div class="form-group full">
+          <label>Message</label>
+          <textarea placeholder="Tell us more..."></textarea>
+        </div>
+        <button class="btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display:inline;vertical-align:middle;">
+            <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="7" stroke="#6366F1" stroke-width="2" />
+              <line x1="17.5" y1="17.5" x2="22" y2="22" stroke="#6366F1" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>Unifound</span>
+          </div>
+          <p class="footer-desc">
+            A modern lost &amp; found platform built for university campuses.
+            Report, track, and recover — all in one place.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Platform</h4>
+            <a href="lost.html">Report Lost Item</a>
+            <a href="found.html">Report Found Item</a>
+            <a href="track_item.html">Track Item</a>
+            <a href="#">Dashboard</a>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <a href="#">How It Works</a>
+            <a href="#">FAQ</a>
+            <a href="contact.html">Support</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+      <p class="footer-bottom">© 2026 Unifound. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/auth.js"></script>
+</body>
+</html>
