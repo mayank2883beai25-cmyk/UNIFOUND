@@ -32,6 +32,14 @@ Unifound is a comprehensive lost and found management system that helps students
 
 ---
 
+### Team Members
+
+- Mayank Goyal
+- Yogesh Chugh
+- Priyanshu Sharma
+
+---
+
 ## ✨ Features
 
 ### For Users
